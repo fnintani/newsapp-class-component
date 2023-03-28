@@ -1,13 +1,125 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	box-sizing: border-box;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+	--dark-color: rgb(44, 51, 51);
+	--medium-color: rgb(46, 79, 79);
+	--light-color:rgb(14, 131, 136);
+	--extra-light-color: rgb(203, 228, 222);
+}
+
+body {
+	background-color: var(--extra-light-color);
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+}
+
+.navbar {
+	background-color: var(--dark-color);
+	width: 100vw;
+	height: 40px;
+	padding: 10px;
+}
+
+.logo{
+	color: var(--extra-light-color)
+}
+
+.form-container {
+	margin: 20px auto 20px auto;
+	width: 500px;
+	height: 35px;
+}
+
+.input-text {
+	width:75%;
+	display: inline-block;
+	border-radius:5px;
+	height: 35px;
+	border: 2px solid var(--medium-color); 
+	outline: 1px solid gray;
+}
+
+
+.container-card {
+	margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.card {
+	box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    width: 260px;
+    background-color: rgb(14, 131, 136,0.7);
+    margin: 1rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-img {
+ 	width: 100%;
+    height: 250px;
+}
+
+.card-body {
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: stretch;
+    padding: 5px 15px 15px 15px;
+    height: 187px;
+}
+
+.card-text {
+	font-size: 0.9em;
+	align-self: start;
+}
+
+.card-link {
+	display: block;
+	color: var(--extra-light-color);
+	text-decoration: none;
+	justify-self: end;
+	align-self: end;
+
+}
+
+.loading {
+	margin: auto auto;
+	color: var(--dark-color);
+	font-size: 1.2em;
+	animation: animate 1s ease-in-out infinite;
+	letter-spacing: 5px;
+	text-align: center;
+}
+
+.error {
+	margin: auto auto;
+	color: red;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+@keyframes animate {
+            0% {
+                transform: translateY(0px);
+            }
+
+            20% {
+                transform: translateY(-20px);
+            }
+
+            40%,
+            100% {
+                transform: translateY(0px);
+        }
 }
